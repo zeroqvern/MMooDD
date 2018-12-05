@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    android:id="@+id/createEntryParent"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <RelativeLayout
+        android:id="@+id/relLayoutEntry"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:id="@+id/relLayoutTopEntry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true">
+
+            <android.support.design.widget.AppBarLayout
+                android:id="@+id/toolbarTopEntry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/white_grey_border_bottom"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginVertical="10dp">
+
+                    <Button
+                        android:id="@+id/cancel_btn"
+                        android:layout_width="70dp"
+                        android:layout_height="35dp"
+                        android:text="@string/cancel"
+                        android:background="@android:color/transparent"
+                        android:outlineProvider="none"
+                        android:textSize="15dp"
+                        android:textColor="@color/purpleGrey"
+                        android:layout_weight="0"
+                        android:layout_gravity="center"
+                        />
+
+                    <TextView
+                        android:id="@+id/dateTextEntry"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dateHeaderText"
+                        android:gravity="center"
+                        android:textColor="@color/darkIndigo"
+                        android:textStyle="bold"
+                        android:textSize="20dp"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        />
+
+
+                    <Button
+                        android:id="@+id/done_btn"
+                        android:layout_width="70dp"
+                        android:layout_height="35dp"
+                        android:text="@string/done"
+                        android:background="@android:color/transparent"
+                        android:outlineProvider="none"
+                        android:textSize="15dp"
+                        android:textColor="@color/lightPurple"
+                        android:layout_weight="0"
+                        android:layout_gravity="center"
+                        />
+
+                </LinearLayout>
+
+
+
+            </android.support.design.widget.AppBarLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relLayoutMiddleEntry"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/relLayoutTopEntry"
+            android:layout_above="@+id/relLayoutBottomEntry"
+            android:layout_margin="15dp">
+
+
+            <TextView
+                android:id="@+id/entryTitle_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/newEntryTitle"
+                android:gravity="left"
+                android:textColor="@color/lightPurple"
+                android:textSize="12dp"
+                android:layout_alignParentTop="true"
+                />
+
+            <TextView
+                android:id="@+id/timeText"
+                android:layout_alignParentRight="true"
+                android:text="@string/timeDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/lightPurple"
+                android:textSize="12dp"/>
+
+            <EditText
+                android:id="@+id/entryTitleInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/newEntryTitle_Hint"
+                android:layout_below="@id/entryTitle_text"
+                android:background="@android:color/transparent"
+                android:textSize="15dp"
+                android:layout_marginTop="5dp"/>
+
+
+            <TextView
+                android:id="@+id/entryContent_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/newEntryContent"
+                android:gravity="left"
+                android:textColor="@color/lightPurple"
+                android:textSize="12dp"
+                android:layout_below="@+id/entryTitleInput"
+                android:layout_marginTop="15dp"
+                />
+
+            <EditText
+                android:id="@+id/entryContentInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/newEntryContent_Hint"
+                android:textSize="15dp"
+                android:scrollbars="vertical"
+                android:background="@android:color/transparent"
+                android:layout_below="@id/entryContent_text"
+                android:layout_marginTop="5dp"
+                />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relLayoutBottomEntry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="15dp"
+            >
+            <ImageButton
+                android:id="@+id/gallery_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_gallery"
+                android:background="@android:color/transparent"
+                android:tint="@color/lightPurple"
+                android:padding="10dp"
+                />
+
+            <TextView
+                android:id="@+id/numAttach"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:textColor="@color/lightPurple"
+                android:layout_toRightOf="@id/gallery_btn"
+                android:paddingVertical="10dp"
+                android:paddingEnd="15dp"
+                />
+
+            <ImageButton
+                android:id="@+id/mood_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_moods"
+                android:padding="10dp"
+                android:layout_toRightOf="@id/numAttach"
+                android:layout_marginTop="8dp"
+                />
+
+            <TextView
+                android:id="@+id/mood_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:textColor="@color/lightPurple"
+                android:layout_toRightOf="@id/mood_btn"
+                android:padding="10dp"
+                android:textStyle="bold"
+                />
+
+            <Button
+                android:id="@+id/viewImage_Btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Images"
+                android:background="@android:color/transparent"
+                android:textColor="@color/lightPurple"
+                android:textSize="12dp"
+                android:paddingVertical="10dp"
+                android:layout_alignParentEnd="true"
+                />
+
+            <!--<ImageButton-->
+            <!--android:id="@+id/activity_btn"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:src="@drawable/ic_activity"-->
+            <!--android:background="@android:color/transparent"-->
+            <!--android:tint="@color/lightPurple"-->
+            <!--android:padding="10dp"-->
+            <!--android:layout_toRightOf="@+id/mood_btn"-->
+            <!--/>-->
+
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+
+</android.support.constraint.ConstraintLayout>

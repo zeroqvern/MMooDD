@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:id="@+id/relLayoutTopGallery"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:gravity="center_horizontal"
+            android:background="@drawable/white_grey_border_bottom"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:orientation="horizontal"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="10dp"
+                >
+
+
+                <ImageButton
+                    android:id="@+id/back_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:outlineProvider="none"
+                    android:background="@android:color/transparent"
+                    android:textStyle="bold"
+                    android:textColor="@color/lightPurple"
+                    android:layout_weight="0"
+                    android:src="@drawable/ic_arrow_back"
+                    android:layout_marginLeft="20dp"
+                    android:layout_gravity="center"
+                    />
+
+                <TextView
+                    android:id="@+id/gallery_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gallery"
+                    android:gravity="center"
+                    android:textColor="@color/darkIndigo"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    />
+
+                <ImageButton
+                    android:layout_width="24dp"
+                    android:layout_height="35dp"
+                    android:outlineProvider="none"
+                    android:background="@android:color/transparent"
+                    android:layout_weight="0"
+                    android:layout_marginLeft="20dp"
+                    />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/relLayoutTopGallery"
+            android:background="@color/white"
+            >
+
+            <GridView
+                android:id="@+id/gridviewGallery"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:numColumns="3"
+                android:stretchMode="columnWidth"
+                android:horizontalSpacing="0dp"
+                android:verticalSpacing="0dp"
+                >
+            </GridView>
+
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

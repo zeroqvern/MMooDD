@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/btm_nav_entry"
+        android:icon="@drawable/ic_entry"
+        android:title="@string/menu_entries"/>
+
+    <item
+        android:id="@+id/btm_nav_stats"
+        android:icon="@drawable/ic_stats"
+        android:title="@string/menu_stats"/>
+
+    <item
+        android:id="@+id/btm_nav_moreOpt"
+        android:icon="@drawable/ic_more_options"
+        android:title="@string/menu_moreOpt"/>
+
+</menu>
+
+

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/containerEntry">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="15dp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/moodTitle_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/moodTitle"
+                android:gravity="center_horizontal"
+                android:textStyle="italic"
+                android:textSize="25dp"
+                android:textColor="@color/lightPurple"
+                android:layout_marginBottom="15dp"
+                />
+
+            <RelativeLayout
+                android:id="@+id/moodSelection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/moodTitle_text"
+                android:gravity="center_horizontal"
+                android:layout_marginBottom="15dp">
+
+                <ImageView
+                    android:id="@+id/mood_happy"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/ic_mood_happy"
+                    android:backgroundTint="@color/orange"
+                    android:layout_marginRight="5dp"/>
+
+                <ImageView
+                    android:id="@+id/mood_normal"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/ic_mood_normal"
+                    android:layout_toRightOf="@id/mood_happy"
+                    android:backgroundTint="@color/green"
+                    android:layout_marginRight="5dp"/>
+
+                <ImageView
+                    android:id="@+id/mood_numb"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/ic_mood_numb"
+                    android:layout_toRightOf="@+id/mood_normal"
+                    android:backgroundTint="@color/purple"
+                    android:layout_marginRight="5dp"/>
+
+                <ImageView
+                    android:id="@+id/mood_sad"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/ic_mood_sad"
+                    android:layout_toRightOf="@id/mood_numb"
+                    android:backgroundTint="@color/blue"
+                    android:layout_marginRight="5dp"/>
+
+                <ImageView
+                    android:id="@+id/mood_dead"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/ic_mood_dead"
+                    android:layout_toRightOf="@id/mood_sad"
+                    android:backgroundTint="@color/coolGrey"
+                    />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+        <ImageButton
+            android:id="@+id/next_btn"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/ic_arrow_right_drop_circle"
+            android:backgroundTint="@color/darkIndigo"
+            android:layout_marginBottom="70dp"
+            />
+
+    </RelativeLayout>
+
+
+</android.support.constraint.ConstraintLayout>

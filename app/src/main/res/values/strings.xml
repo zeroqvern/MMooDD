@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">MMooDD</string>
+    <string name="dateHeaderText">MONTH YEAR</string>
+    <string name="menu_entries">Entries</string>
+    <string name="menu_stats">Stats</string>
+    <string name="menu_moreOpt">More</string>
+    <string name="menu_edit">Edit</string>
+    <string name="menu_delete">Delete</string>
+    <string name="today">today</string>
+    <string name="yesterday">yesterday</string>
+    <string name="other_day">other day</string>
+    <string name="cancel">cancel</string>
+    <string name="done">done</string>
+    <string name="newEntryTitle">Title</string>
+    <string name="newEntryTitle_Hint">Enter title here</string>
+    <string name="newEntryContent">Content</string>
+    <string name="newEntryContent_Hint">Any thing else on your mind?</string>
+    <string name="moodTitle">ANY MMooDD UPDATES?</string>
+    <string name="activityTitle">What are you doing?</string>
+    <string name="feelingText">feeling - </string>
+    <string name="moodText">Normal</string>
+    <string name="monthDate">OCT</string>
+    <string name="dayDate">21</string>
+    <string name="timeDate">20:02</string>
+    <string name="dateText"><u>dd MM yyyy</u></string>
+    <string name="noEntryText">So empty! (　；∀；)</string>
+    <string name="monthInPixels">Month in Pixels</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

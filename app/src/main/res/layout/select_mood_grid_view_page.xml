@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:descendantFocusability="blocksDescendants"
+
+    >
+
+    <TextView
+        android:id="@+id/moodTitle_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/moodTitle"
+        android:gravity="center_horizontal"
+        android:textSize="25dp"
+        android:textColor="@color/lightPurple"
+        android:layout_marginBottom="15dp"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        />
+
+    <LinearLayout
+        android:id="@+id/relLayoutTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_below="@+id/moodTitle_text">
+
+        <ImageView
+            android:id="@+id/calendarIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_other_day_24dp"
+            android:backgroundTint="@color/lightPurple"
+            android:layout_marginVertical="5dp"
+            />
+        <EditText
+            android:id="@+id/selectDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dateText"
+            android:layout_marginHorizontal="10dp"
+            android:textSize="15dp"
+            android:backgroundTint="@color/lightPurple"
+            android:textColor="@color/lightPurple"
+            android:background="@drawable/border_bottom"
+            android:paddingHorizontal="5dp"
+
+            />
+
+        <ImageView
+            android:id="@+id/timeIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_today"
+            android:backgroundTint="@color/lightPurple"
+            android:layout_marginLeft="10dp"
+            />
+
+        <EditText
+            android:id="@+id/selectTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/timeDate"
+            android:layout_marginHorizontal="10dp"
+            android:textSize="15dp"
+            android:backgroundTint="@color/lightPurple"
+            android:textColor="@color/lightPurple"
+            android:background="@drawable/border_bottom"
+            android:paddingHorizontal="5dp"
+            />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/relLayoutMoodIcons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relLayoutTime"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="20dp"
+        >
+
+        <GridView
+            android:id="@+id/gridViewMood"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:columnWidth="60dp"
+            android:horizontalSpacing="5dp"
+            android:verticalSpacing="15dp"
+            android:numColumns="5"
+            android:layout_centerHorizontal="true"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relLayoutMoodNext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relLayoutMoodIcons"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:layout_marginTop="10dp"
+        >
+
+        <ImageButton
+            android:id="@+id/next_btn"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/ic_arrow_forward"
+            android:backgroundTint="@color/darkIndigo"
+            android:layout_marginBottom="70dp"
+            android:clickable="false"
+            android:visibility="invisible"
+            />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

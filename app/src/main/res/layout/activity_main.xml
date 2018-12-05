@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:apps="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Activities.HomeActivity">
+
+    <RelativeLayout
+        android:id="@+id/relFab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="78dp"
+        android:layout_gravity="bottom|end"
+        >
+
+        <TextView
+            android:id="@+id/other_day_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/other_day"
+            android:layout_marginBottom="50dp"
+            android:layout_marginLeft="3dp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            style="@style/AddShadowToText"
+            android:visibility="invisible"
+            />
+
+        <TextView
+            android:id="@+id/yesterday_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/yesterday"
+            android:layout_below="@+id/other_day_text"
+            android:layout_marginBottom="50dp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            style="@style/AddShadowToText"
+            android:visibility="invisible"
+            />
+        <TextView
+            android:id="@+id/today_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/today"
+            android:layout_below="@id/yesterday_text"
+            android:layout_marginBottom="107dp"
+            android:layout_marginLeft="23dp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            style="@style/AddShadowToText"
+            android:visibility="invisible"
+            />
+
+    </RelativeLayout>
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/otherDayFab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginRight="@dimen/fab_margin"
+        android:layout_marginBottom="225dp"
+        android:src="@drawable/ic_other_day_24dp"
+        android:elevation="6dp"
+        android:scaleType="center"
+        app:fabSize="normal"
+        app:pressedTranslationZ="12dp"
+        android:visibility="invisible"
+        apps:backgroundTint="@color/ruby"
+        android:foregroundTint="@color/white"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/yesterdayFab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginRight="@dimen/fab_margin"
+        android:layout_marginBottom="155dp"
+        android:src="@drawable/ic_yesterday_24dp"
+        android:elevation="6dp"
+        android:scaleType="center"
+        app:fabSize="normal"
+        app:pressedTranslationZ="12dp"
+        android:visibility="invisible"
+        apps:backgroundTint="@color/sandy"
+        android:foregroundTint="@color/white"
+        />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/todayFab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginRight="@dimen/fab_margin"
+        android:layout_marginBottom="85dp"
+        android:src="@drawable/ic_today_24dp"
+        android:elevation="6dp"
+        android:scaleType="center"
+        app:fabSize="normal"
+        app:pressedTranslationZ="12dp"
+        android:visibility="invisible"
+        apps:backgroundTint="@color/lightPurple"
+        android:foregroundTint="@color/white"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/addEntryFab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginRight="@dimen/fab_margin"
+        android:layout_marginBottom="@dimen/fab_margin"
+        android:src="@drawable/ic_add_entry_24dp"
+        android:elevation="6dp"
+        android:scaleType="center"
+        app:fabSize="normal"
+        apps:backgroundTint="@color/teal"
+        android:foregroundTint="@color/white"
+
+        />
+
+    <RelativeLayout
+        android:id="@+id/relDarkOut"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:visibility="gone"
+        >
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <RelativeLayout
+            android:id="@+id/relLayoutTop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true">
+
+            <android.support.design.widget.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/white_grey_border_bottom"
+                >
+
+                <TableRow
+                    android:id="@+id/toolbarTop"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="50dp"
+                    android:layout_marginVertical="15dp"
+                    >
+
+                    <ImageButton
+                        android:id="@+id/arrow_back"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/ic_arrow_back"
+                        android:backgroundTint="@color/darkIndigo"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true" />
+
+
+                    <TextView
+                        android:id="@+id/dateText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dateHeaderText"
+                        android:gravity="center_horizontal"
+                        android:textColor="@color/darkIndigo"
+                        android:textStyle="bold"
+                        android:textSize="20dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_weight="1"
+                        android:clickable="true"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/arrow_forward"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/ic_arrow_forward"
+                        android:backgroundTint="@color/purpleGrey"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true" />
+
+
+                </TableRow>
+
+            </android.support.design.widget.AppBarLayout>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/relLayoutMiddle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/relLayoutTop"
+            android:layout_above="@+id/relLayoutBottom">
+
+            <FrameLayout
+                android:id="@+id/container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </FrameLayout>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/relLayoutBottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/darkindigo_grey_border_top"
+            >
+
+
+            <android.support.design.widget.BottomNavigationView
+                android:id="@+id/bottomNavView_Bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="70dp"
+                android:paddingVertical="2dp"
+                apps:itemIconTint="@drawable/item_color_change"
+                apps:itemTextColor="@drawable/item_color_change"
+                apps:menu="@menu/btm_nav_menu"
+                >
+
+            </android.support.design.widget.BottomNavigationView>
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/masking"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:clickable="true"
+            android:visibility="gone"
+            />
+
+    </RelativeLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>
+
